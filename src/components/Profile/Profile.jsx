@@ -1,33 +1,30 @@
 import css from './Profile.module.css';
 
-const Profile = () => {
-    return (<div>
-          <div>
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
-              alt="User avatar"
-            />
-            <p>Petra Marica</p>
-            <p>@pmarica</p>
-            <p>Salvador, Brasil</p>
-          </div>
-        
-          <ul>
-            <li>
-              <span>Followers</span>
-              <span>1000</span>
-            </li>
-            <li>
-              <span>Views</span>
-              <span>2000</span>
-            </li>
-            <li>
-              <span>Likes</span>
-              <span>3000</span>
-            </li>
-          </ul>
-        </div>
-        )
-}
+const Profile = ({ name, tag, location, image, stats }) => {
+    return( <div className={css.profile}>
+       <div className={css.userInfoProfile}>
+         <img className={css.userPhoto} src={image} alt="User avatar" />
+         <p className={css.userName}>{name}</p>
+         <p className={css.userInfo}>@{tag}</p>
+         <p className={css.userInfo}>{location}</p>
+       </div>
+ 
+       <ul className={css.activityProfile}>
+         <li className={css.activitySection}>
+           <span>Followers</span>
+           <span className={css.activityNumbers}>{stats.followers}</span>
+         </li>
+         <li className={css.activitySection}>
+           <span>Views</span>
+           <span className={css.activityNumbers}>{stats.views}</span>
+         </li>
+         <li className={css.activitySection}>
+           <span>Likes</span>
+           <span className={css.activityNumbers}>{stats.likes}</span>
+         </li>
+       </ul>
+     </div>
+     )
+ }
 
 export default Profile;
