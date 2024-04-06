@@ -1,0 +1,23 @@
+.tableCell {
+    border: black solid 1px;
+    padding: 2px 70px;
+    text-align: center;
+    text-transform: capitalize;
+}
+  
+.tableProfile {
+    border-collapse: collapse;
+}
+  
+.tableHead {
+    border: black solid 1px;
+    padding: 2px 70px;
+    text-align: center;
+    text-transform: capitalize;
+    background-color: rgb(49, 49, 49);
+    color: white;
+}
+  
+.tableLine:nth-child(2n) {
+    background-color: rgb(194, 193, 193);
+}
